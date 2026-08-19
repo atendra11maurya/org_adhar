@@ -1,0 +1,78 @@
+:root {
+  /* Surface & Base Environment */
+  --color-bg-base: #F5F1E8;
+  --color-bg-subtle: #ECE7DC;
+  --color-bg-card: #FAF7F0;
+  --color-bg-surface: #FFFFFF;
+  
+  /* Text & Ink */
+  --color-text-primary: #171717;
+  --color-text-secondary: #3A3936;
+  --color-text-muted: #706E68;
+  --color-text-light: #F5F1E8;
+
+  /* Institutional Anchor */
+  --color-navy: #10233F;
+  --color-navy-dark: #0A1628;
+  --color-navy-light: #1E3A63;
+  --color-navy-tint: rgba(16, 35, 63, 0.05);
+
+  /* Five Identity Accents (Used Selectively) */
+  --accent-green: #8EA843;
+  --accent-green-tint: rgba(142, 168, 67, 0.12);
+  --accent-orange: #E86932;
+  --accent-orange-tint: rgba(232, 105, 50, 0.12);
+  --accent-magenta: #D72B77;
+  --accent-magenta-tint: rgba(215, 43, 119, 0.12);
+  --accent-purple: #752A8C;
+  --accent-purple-tint: rgba(117, 42, 140, 0.12);
+  --accent-sand: #A39686;
+  --accent-sand-tint: rgba(163, 150, 134, 0.15);
+
+  /* Lines & Borders */
+  --color-border: rgba(23, 23, 23, 0.12);
+  --color-border-subtle: rgba(23, 23, 23, 0.06);
+  --color-border-dark: rgba(245, 241, 232, 0.15);
+
+  /* Typography - Clean Modern Sans-Serif Everywhere */
+  --font-serif: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  /* Fluid Type Scale */
+  --font-size-display: clamp(2.5rem, 5.5vw, 5.75rem);
+  --font-size-hero: clamp(2.25rem, 5vw, 5rem);
+  --font-size-h1: clamp(2rem, 3.8vw, 3.75rem);
+  --font-size-h2: clamp(1.65rem, 2.75vw, 2.75rem);
+  --font-size-h3: clamp(1.25rem, 1.75vw, 1.75rem);
+  --font-size-body-lg: clamp(1.0625rem, 1.25vw, 1.25rem);
+  --font-size-body: 1rem;
+  --font-size-body-sm: 0.875rem;
+  --font-size-label: 0.6875rem;
+
+  /* Spacing Scale - Generous & Breathable */
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2.5rem;
+  --space-xl: 4rem;
+  --space-2xl: 6.5rem;
+  --space-3xl: 9.5rem;
+
+  /* Layout */
+  --max-width: 1340px;
+  --max-width-narrow: 1040px;
+  --gutter: clamp(1.25rem, 4vw, 3.5rem);
+  --radius-sm: 2px;
+  --radius-md: 4px;
+  --radius-lg: 8px;
+
+  /* Shadows */
+  --shadow-subtle: 0 4px 20px rgba(0, 0, 0, 0.04);
+  --shadow-card: 0 10px 30px rgba(0, 0, 0, 0.06);
+  --shadow-elevated: 0 20px 40px rgba(0, 0, 0, 0.08);
+
+  /* Transitions */
+  --transition-fast: 200ms cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-smooth: 400ms cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-slow: 700ms cubic-bezier(0.16, 1, 0.3, 1);
+}

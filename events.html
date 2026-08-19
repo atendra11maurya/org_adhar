@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Events &amp; Discourse — AADHARSHILA | Moments That Shape Us</title>
+  <meta name="description" content="Explore flagship conclaves, rhetoric masterclasses, speaker sessions, and experiential expeditions at Aadharshila, Motilal Nehru College." />
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="/src/styles/variables.css" />
+  <link rel="stylesheet" href="/src/styles/base.css" />
+  <link rel="stylesheet" href="/src/styles/components.css" />
+  <link rel="stylesheet" href="/src/styles/pages.css" />
+</head>
+<body>
+
+  <!-- Site Navigation -->
+  <header class="site-header" id="site-header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-identity" aria-label="Aadharshila Home">
+        <svg class="brand-emblem-mini" viewBox="0 0 100 100" fill="none">
+          <circle cx="50" cy="50" r="12" fill="#10233F" />
+          <path d="M50 18 C58 18 64 24 64 32 C64 38 58 42 50 42 C42 42 36 38 36 32 C36 24 42 18 50 18 Z" fill="#8EA843" transform="rotate(0 50 50)" />
+          <path d="M50 18 C58 18 64 24 64 32 C64 38 58 42 50 42 C42 42 36 38 36 32 C36 24 42 18 50 18 Z" fill="#E86932" transform="rotate(72 50 50)" />
+          <path d="M50 18 C58 18 64 24 64 32 C64 38 58 42 50 42 C42 42 36 38 36 32 C36 24 42 18 50 18 Z" fill="#D72B77" transform="rotate(144 50 50)" />
+          <path d="M50 18 C58 18 64 24 64 32 C64 38 58 42 50 42 C42 42 36 38 36 32 C36 24 42 18 50 18 Z" fill="#A39686" transform="rotate(216 50 50)" />
+          <path d="M50 18 C58 18 64 24 64 32 C64 38 58 42 50 42 C42 42 36 38 36 32 C36 24 42 18 50 18 Z" fill="#752A8C" transform="rotate(288 50 50)" />
+        </svg>
+        <div class="brand-names">
+          <span class="brand-primary">AADHARSHILA</span>
+          <span class="brand-sub">The Foundation Stone · MLNC</span>
+        </div>
+      </a>
+
+      <nav class="nav-menu" aria-label="Main Navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="events.html" class="nav-link active">Events</a>
+        <a href="people.html" class="nav-link">People</a>
+        <a href="join.html" class="nav-link">Join</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="join.html" class="btn btn-primary">Join Aadharshila</a>
+        <button class="mobile-toggle" id="mobile-toggle-btn" aria-label="Toggle Menu">
+          <i data-lucide="menu"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-menu-drawer" id="mobile-menu-drawer">
+    <div style="display: flex; justify-content: flex-end; margin-bottom: 2rem;">
+      <button id="mobile-close-btn" style="background:none; border:none; cursor:pointer;">
+        <i data-lucide="x"></i>
+      </button>
+    </div>
+    <div class="mobile-nav-links">
+      <a href="index.html" class="mobile-nav-link">Home</a>
+      <a href="about.html" class="mobile-nav-link">About</a>
+      <a href="events.html" class="mobile-nav-link">Events</a>
+      <a href="people.html" class="mobile-nav-link">People</a>
+      <a href="join.html" class="mobile-nav-link">Join</a>
+    </div>
+    <a href="join.html" class="btn btn-primary" style="width: 100%; text-align: center;">Join Aadharshila</a>
+  </div>
+
+  <main id="main-content">
+    
+    <!-- Masthead -->
+    <section class="page-masthead">
+      <div class="container">
+        <div class="masthead-inner">
+          <div class="eyebrow">
+            <span class="accent-dot orange"></span> CURATED INITIATIVES &amp; ARCHIVE
+          </div>
+          <h1 class="masthead-title">
+            Moments That Shape Us
+          </h1>
+          <p class="masthead-lead">
+            Documenting the seminars, fireside masterclasses, public debates, and field expeditions that cultivate character, intellectual stamina, and leadership at Motilal Nehru College.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Filter & Archive Grid -->
+    <section class="section">
+      <div class="container">
+        
+        <!-- Category Filter Tabs -->
+        <div class="events-filter-bar reveal-up">
+          <button class="filter-btn active" data-filter="all">All Initiatives</button>
+          <button class="filter-btn" data-filter="seminars">National Seminars</button>
+          <button class="filter-btn" data-filter="personality">Personality Workshops</button>
+          <button class="filter-btn" data-filter="leadership">Leadership Keynotes</button>
+          <button class="filter-btn" data-filter="discussions">Scientific Symposia</button>
+          <button class="filter-btn" data-filter="speakers">Speaker Sessions</button>
+        </div>
+
+        <!-- Archive Grid -->
+        <div class="events-archive-grid">
+          
+          <!-- Event 1: Lead Card - Abhyudaya -->
+          <div class="archive-card archive-card-full reveal-up" data-category="seminars" data-event-id="abhyudaya-symposium">
+            <div class="event-image-wrapper">
+              <img src="/src/assets/images/event_abhyudaya_leaders.png" alt="ABHYUDAYA Leadership Summit" class="event-image" />
+            </div>
+            <div class="event-content">
+              <div class="event-meta-line">
+                <span class="accent-dot purple"></span>
+                <span>NATIONAL SEMINAR</span>
+                <span>·</span>
+                <span>18 MARCH 2026</span>
+              </div>
+              <h2 style="font-size: clamp(1.5rem, 2.2vw, 2rem); font-weight: 400; line-height: 1.2;">
+                ABHYUDAYA: National Leadership &amp; Governance Summit
+              </h2>
+              <div class="event-speaker-tag">Dr. Sanjeev Chopra (Ex-Director LBSNAA) · Ravi Kapoor (Ex-IRS) · Dr. Deepak Jaiswal</div>
+              <p class="event-summary">
+                A landmark institutional gathering exploring public administration, ethical governance, and civil leadership. Attended by over 300 delegates across Delhi University.
+              </p>
+              <div class="btn-text" style="margin-top: 1rem;">
+                Read Complete Event Report <i data-lucide="arrow-up-right" style="width: 14px; height: 14px;"></i>
+              </div>
+            </div>
+          </div>
+
+          <!-- Event 2: Dr. Vijendra Chauhan -->
+          <div class="archive-card reveal-up" data-category="personality" data-event-id="vijendra-chauhan-seminar">
+            <div class="event-image-wrapper">
+              <img src="/src/assets/images/event_vijendra_chauhan.png" alt="Dr. Vijendra Chauhan Seminar" class="event-image" />
+            </div>
+            <div class="event-content">
+              <div class="event-meta-line">
+                <span class="accent-dot orange"></span>
+                <span>PERSONALITY DEVELOPMENT</span>
+                <span>·</span>
+                <span>12 FEB 2026</span>
+              </div>
+              <h3 class="event-title">Communication Seminar: Leadership &amp; Decision-Making</h3>
+              <div class="event-speaker-tag">Dr. Vijendra Chauhan (Intelligencia)</div>
+              <p class="event-summary">
+                Masterclass covering verbal precision, career planning, interview composure, and nation-building through individual excellence.
+              </p>
+              <div class="btn-text">
+                Explore Event <i data-lucide="arrow-right" style="width: 14px; height: 14px;"></i>
+              </div>
+            </div>
+          </div>
+
+          <!-- Event 3: Air Marshal Sanjeev Kapoor -->
+          <div class="archive-card reveal-up" data-category="leadership" data-event-id="sanjeev-kapoor-keynote">
+            <div class="event-image-wrapper">
+              <img src="/src/assets/images/event_sanjeev_kapoor.png" alt="Air Marshal Sanjeev Kapoor Keynote" class="event-image" />
+            </div>
+            <div class="event-content">
+              <div class="event-meta-line">
+                <span class="accent-dot orange"></span>
+                <span>LEADERSHIP KEYNOTE</span>
+                <span>·</span>
+                <span>24 JAN 2026</span>
+              </div>
+              <h3 class="event-title">Leadership &amp; Moral Courage: The Man Behind the Machine</h3>
+              <div class="event-speaker-tag">Air Marshal (Retd.) Sanjeev Kapoor</div>
+              <p class="event-summary">
+                A keynote on military strategy, crisis fortitude, and why character determines outcomes beyond mere technical equipment.
+              </p>
+              <div class="btn-text">
+                Explore Event <i data-lucide="arrow-right" style="width: 14px; height: 14px;"></i>
+              </div>
+            </div>
+          </div>
+
+          <!-- Event 4: Science Is the Way to Live -->
+          <div class="archive-card reveal-up" data-category="discussions" data-event-id="science-way-of-life">
+            <div class="event-image-wrapper">
+              <img src="/src/assets/images/event_science_life.png" alt="Science Is the Way to Live Symposium" class="event-image" />
+            </div>
+            <div class="event-content">
+              <div class="event-meta-line">
+                <span class="accent-dot green"></span>
+                <span>SCIENTIFIC DISCOURSE</span>
+                <span>·</span>
+                <span>15 NOV 2025</span>
+              </div>
+              <h3 class="event-title">Science Is the Way to Live: Interdisciplinary Symposium</h3>
+              <div class="event-speaker-tag">Dr. Alok K. Mishra · Dr. Meena Mishra (MD) · Dr. Shankar G. Aggarwal</div>
+              <p class="event-summary">
+                Cross-disciplinary inquiry into rational thinking, empirical habits, medicine, and human well-being for modern undergraduates.
+              </p>
+              <div class="btn-text">
+                Explore Event <i data-lucide="arrow-right" style="width: 14px; height: 14px;"></i>
+              </div>
+            </div>
+          </div>
+
+          <!-- Event 5: Abhishek Mishra -->
+          <div class="archive-card reveal-up" data-category="speakers" data-event-id="abhishek-mishra-session">
+            <div class="event-image-wrapper">
+              <img src="/src/assets/images/speaker_abhishek_mishra.png" alt="Abhishek Mishra Session" class="event-image" />
+            </div>
+            <div class="event-content">
+              <div class="event-meta-line">
+                <span class="accent-dot magenta"></span>
+                <span>SPEAKER SESSION</span>
+                <span>·</span>
+                <span>08 OCT 2025</span>
+              </div>
+              <h3 class="event-title">Civil Services &amp; Ethical Public Leadership</h3>
+              <div class="event-speaker-tag">Abhishek Mishra (Faculty Member, Drishti IAS)</div>
+              <p class="event-summary">
+                Mentorship on analytical reading discipline, civil services preparation, and ethics in public administration.
+              </p>
+              <div class="btn-text">
+                Explore Event <i data-lucide="arrow-right" style="width: 14px; height: 14px;"></i>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Institutional Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div>
+          <div class="footer-brand-title">AADHARSHILA</div>
+          <div class="footer-brand-sub">The Foundation Stone</div>
+          <div class="footer-college-tag">
+            Personality Development &amp; Character Building Society<br />
+            <strong>Motilal Nehru College</strong><br />
+            University of Delhi, South Campus, New Delhi 110021
+          </div>
+        </div>
+
+        <div>
+          <div class="footer-col-heading">Navigation</div>
+          <div class="footer-links-list">
+            <a href="index.html" class="footer-link">Home</a>
+            <a href="about.html" class="footer-link">About Society</a>
+            <a href="events.html" class="footer-link">Events &amp; Archive</a>
+            <a href="people.html" class="footer-link">Leadership &amp; Faculty</a>
+            <a href="join.html" class="footer-link">Join Aadharshila</a>
+          </div>
+        </div>
+
+        <div>
+          <div class="footer-col-heading">The Five Threads</div>
+          <div class="footer-links-list">
+            <span class="footer-link" style="opacity: 0.75;">01. Self-Awareness</span>
+            <span class="footer-link" style="opacity: 0.75;">02. Confidence &amp; Speech</span>
+            <span class="footer-link" style="opacity: 0.75;">03. Emotional Intelligence</span>
+            <span class="footer-link" style="opacity: 0.75;">04. Integrity &amp; Values</span>
+            <span class="footer-link" style="opacity: 0.75;">05. Compassionate Leadership</span>
+          </div>
+        </div>
+
+        <div>
+          <div class="footer-col-heading">Connect</div>
+          <div class="footer-links-list">
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="footer-link">Instagram</a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="footer-link">LinkedIn</a>
+            <a href="mailto:aadharshila.mlnc@du.ac.in" class="footer-link">aadharshila.mlnc@du.ac.in</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-values-banner">
+        <div class="footer-values-text">
+          Character · Confidence · Compassion
+        </div>
+        <div style="font-size: 0.8125rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent-sand);">
+          “We Believe in Change.”
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          &copy; 2026 Aadharshila — The Foundation Stone. Motilal Nehru College, University of Delhi.
+        </div>
+        <div>
+          Editorial &amp; Character Excellence Framework
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modal -->
+  <div class="modal-backdrop" id="event-modal">
+    <div class="modal-container">
+      <button class="modal-close-btn" id="modal-close-btn" aria-label="Close Dialog">
+        <i data-lucide="x" style="width: 20px; height: 20px;"></i>
+      </button>
+      <div id="modal-event-body"></div>
+    </div>
+  </div>
+
+  <script type="module" src="/src/scripts/main.js"></script>
+</body>
+</html>

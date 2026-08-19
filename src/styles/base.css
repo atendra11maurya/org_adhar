@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
+
+/* Modern CSS Reset - Zero Italics or Cursive */
+*, *::before, *::after, html, body, em, i, cite, address, dfn, var {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-style: normal !important;
+}
+
+html {
+  font-family: var(--font-sans);
+  background-color: var(--color-bg-base);
+  color: var(--color-text-primary);
+  font-size: 16px;
+  line-height: 1.6;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  background-color: var(--color-bg-base);
+  color: var(--color-text-primary);
+  overflow-x: hidden;
+  position: relative;
+  font-style: normal !important;
+}
+
+/* Subtle editorial paper grain texture */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  opacity: 0.025;
+  z-index: 9999;
+  background-image: radial-gradient(#171717 0.75px, transparent 0.75px);
+  background-size: 24px 24px;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+input, button, textarea, select {
+  font: inherit;
+  font-style: normal !important;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  font-style: normal !important;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+/* Typography Hierarchy - Clean, Upright, Modern */
+h1, h2, h3, h4, .font-display {
+  font-family: var(--font-sans);
+  font-weight: 300;
+  font-style: normal !important;
+  line-height: 1.12;
+  letter-spacing: -0.03em;
+  color: var(--color-text-primary);
+}
+
+.font-serif {
+  font-family: var(--font-sans);
+  font-weight: 400;
+  font-style: normal !important;
+  letter-spacing: -0.01em;
+}
+
+.hero-display {
+  font-size: var(--font-size-hero);
+  font-weight: 300;
+  font-style: normal !important;
+  line-height: 1.04;
+  letter-spacing: -0.04em;
+  text-transform: uppercase;
+}
+
+.section-title {
+  font-size: var(--font-size-h2);
+  font-weight: 300;
+  font-style: normal !important;
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+}
+
+.editorial-statement {
+  font-family: var(--font-sans);
+  font-size: clamp(1.75rem, 3.2vw, 3rem);
+  font-style: normal !important;
+  font-weight: 400;
+  line-height: 1.25;
+  color: var(--color-navy);
+}
+
+.lead-text {
+  font-size: var(--font-size-body-lg);
+  font-weight: 400;
+  font-style: normal !important;
+  line-height: 1.65;
+  color: var(--color-text-secondary);
+}
+
+.eyebrow, .label-caps {
+  font-size: var(--font-size-label);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--color-text-muted);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.badge-index {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  padding: 0.15rem 0.5rem;
+  border-radius: var(--radius-sm);
+  background-color: var(--color-bg-subtle);
+  color: var(--color-text-secondary);
+  border: 1px solid var(--color-border);
+}
+
+/* Grid & Layout System */
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--gutter);
+  padding-right: var(--gutter);
+}
+
+.container-narrow {
+  width: 100%;
+  max-width: var(--max-width-narrow);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--gutter);
+  padding-right: var(--gutter);
+}
+
+.grid-12 {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: clamp(1rem, 2vw, 2rem);
+}
+
+/* Section Spacing - Airy, Breathable */
+.section {
+  padding-top: clamp(4.5rem, 8vw, 8.5rem);
+  padding-bottom: clamp(4.5rem, 8vw, 8.5rem);
+  position: relative;
+}
+
+.section-divider {
+  width: 100%;
+  height: 1px;
+  background-color: var(--color-border);
+  margin: 0;
+  border: none;
+}
+
+/* Accent Markers */
+.accent-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  display: inline-block;
+}
+.accent-dot.green { background-color: var(--accent-green); }
+.accent-dot.orange { background-color: var(--accent-orange); }
+.accent-dot.magenta { background-color: var(--accent-magenta); }
+.accent-dot.purple { background-color: var(--accent-purple); }
+.accent-dot.sand { background-color: var(--accent-sand); }
+.accent-dot.navy { background-color: var(--color-navy); }
+
+/* Animation Utility Classes */
+.reveal-init {
+  opacity: 0;
+  transform: translateY(24px);
+  will-change: transform, opacity;
+}
+
+/* Respect Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

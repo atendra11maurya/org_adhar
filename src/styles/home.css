@@ -1,0 +1,223 @@
+/* ==========================================================================
+   HOMEPAGE SPECIFIC LAYOUTS
+   ========================================================================== */
+
+/* Hero Section */
+.hero-section {
+  padding-top: clamp(7.5rem, 14vw, 11rem);
+  padding-bottom: clamp(4rem, 8vw, 7.5rem);
+  min-height: 92vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: clamp(1.5rem, 3vw, 2.5rem);
+  align-items: start;
+}
+
+.hero-typography-col {
+  grid-column: span 8;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.hero-media-col {
+  grid-column: span 4;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.hero-main-title {
+  font-family: var(--font-sans);
+  font-size: var(--font-size-hero);
+  font-weight: 300;
+  line-height: 1.02;
+  letter-spacing: -0.04em;
+  color: var(--color-text-primary);
+  text-transform: uppercase;
+}
+
+.hero-main-title span.headline-accent {
+  font-family: var(--font-sans);
+  font-style: normal !important;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: var(--color-navy);
+}
+
+.hero-subhead-box {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  max-width: 580px;
+  border-left: 1px solid var(--color-border);
+  padding-left: 1.5rem;
+}
+
+.hero-subhead-title {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-navy);
+}
+
+.hero-subhead-desc {
+  font-size: 1.0625rem;
+  line-height: 1.6;
+  color: var(--color-text-secondary);
+}
+
+.hero-cta-group {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+.hero-image-card {
+  background-color: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  padding: 0.875rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.hero-image-wrap {
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  position: relative;
+  background-color: var(--color-bg-subtle);
+}
+
+.hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-smooth);
+}
+
+.hero-image-card:hover .hero-image {
+  transform: scale(1.03);
+}
+
+.hero-image-caption {
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Institutional Identity Moment */
+.identity-statement-section {
+  background-color: var(--color-bg-subtle);
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+  padding-top: clamp(4.5rem, 8vw, 7.5rem);
+  padding-bottom: clamp(4.5rem, 8vw, 7.5rem);
+}
+
+.statement-grid {
+  display: grid;
+  grid-template-columns: 1.25fr 1fr;
+  gap: clamp(2.5rem, 6vw, 6rem);
+  align-items: center;
+}
+
+.statement-headline {
+  font-family: var(--font-sans);
+  font-style: normal !important;
+  font-weight: 400;
+  font-size: clamp(1.85rem, 3.5vw, 3.25rem);
+  line-height: 1.2;
+  letter-spacing: -0.025em;
+  color: var(--color-navy);
+}
+
+.statement-body-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.statement-text {
+  font-size: 1.0625rem;
+  line-height: 1.7;
+  color: var(--color-text-secondary);
+}
+
+.statement-quote-author {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+}
+
+/* Recruitment CTA Banner */
+.recruitment-banner {
+  background-color: var(--color-navy);
+  color: var(--color-bg-base);
+  padding: clamp(4.5rem, 7vw, 7rem) 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.recruitment-banner-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: clamp(2rem, 4vw, 4rem);
+  align-items: center;
+}
+
+.recruitment-title {
+  font-size: clamp(2.25rem, 4vw, 3.75rem);
+  font-weight: 300;
+  line-height: 1.1;
+  color: #FFFFFF;
+  margin-bottom: 1.25rem;
+}
+
+.recruitment-desc {
+  font-size: 1.125rem;
+  line-height: 1.65;
+  color: rgba(245, 241, 232, 0.8);
+  margin-bottom: 2rem;
+}
+
+.recruitment-action-box {
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 2.5rem;
+  border-radius: var(--radius-md);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .hero-typography-col {
+    grid-column: span 12;
+  }
+  .hero-media-col {
+    grid-column: span 12;
+    max-width: 540px;
+  }
+  .statement-grid,
+  .recruitment-banner-grid {
+    grid-template-columns: 1fr;
+  }
+}
