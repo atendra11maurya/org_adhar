@@ -29,8 +29,10 @@
 }
 
 .brand-emblem-mini {
-  width: 32px;
-  height: 32px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
 }
 
 .brand-names {
@@ -908,4 +910,19 @@
   .footer-top {
     grid-template-columns: 1fr;
   }
+}
+
+.placeholder-photo {
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-bg-subtle);
+  border: 1px dashed var(--color-border-subtle);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-muted);
+  font-family: var(--font-sans);
+  font-size: 0.875rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
 }
