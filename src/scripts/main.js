@@ -57,20 +57,77 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // Mobile Navigation Drawer Toggle
+  // Mobile Navigation Drawer Controller
   const mobileToggle = document.getElementById('mobile-toggle-btn');
   const mobileDrawer = document.getElementById('mobile-menu-drawer');
   const mobileClose = document.getElementById('mobile-close-btn');
 
+  function openMobileMenu() {
+    if (!mobileDrawer || !mobileToggle) return;
+    mobileDrawer.classList.add('is-open');
+    document.body.classList.add('nav-open');
+    mobileToggle.setAttribute('aria-expanded', 'true');
+    mobileToggle.setAttribute('aria-label', 'Close Navigation Menu');
+    
+    // Toggle icons if both are present in toggle
+    const menuIcon = mobileToggle.querySelector('[data-lucide="menu"], .lucide-menu');
+    const xIcon = mobileToggle.querySelector('[data-lucide="x"], .lucide-x');
+    if (menuIcon && xIcon) {
+      menuIcon.style.display = 'none';
+      xIcon.style.display = 'block';
+    }
+
+    // Focus first link in drawer
+    const firstLink = mobileDrawer.querySelector('a, button');
+    if (firstLink) firstLink.focus();
+  }
+
+  function closeMobileMenu() {
+    if (!mobileDrawer || !mobileToggle) return;
+    mobileDrawer.classList.remove('is-open');
+    document.body.classList.remove('nav-open');
+    mobileToggle.setAttribute('aria-expanded', 'false');
+    mobileToggle.setAttribute('aria-label', 'Open Navigation Menu');
+    
+    // Toggle icons back
+    const menuIcon = mobileToggle.querySelector('[data-lucide="menu"], .lucide-menu');
+    const xIcon = mobileToggle.querySelector('[data-lucide="x"], .lucide-x');
+    if (menuIcon && xIcon) {
+      menuIcon.style.display = 'block';
+      xIcon.style.display = 'none';
+    }
+  }
+
   if (mobileToggle && mobileDrawer) {
     mobileToggle.addEventListener('click', () => {
-      mobileDrawer.classList.toggle('is-open');
+      const isOpen = mobileDrawer.classList.contains('is-open');
+      if (isOpen) {
+        closeMobileMenu();
+      } else {
+        openMobileMenu();
+      }
+    });
+
+    // Close when clicking any link inside drawer
+    mobileDrawer.querySelectorAll('a').forEach((link) => {
+      link.addEventListener('click', () => {
+        closeMobileMenu();
+      });
+    });
+
+    // Close on Escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && mobileDrawer.classList.contains('is-open')) {
+        closeMobileMenu();
+        mobileToggle.focus();
+      }
     });
   }
 
   if (mobileClose && mobileDrawer) {
     mobileClose.addEventListener('click', () => {
-      mobileDrawer.classList.remove('is-open');
+      closeMobileMenu();
+      if (mobileToggle) mobileToggle.focus();
     });
   }
 

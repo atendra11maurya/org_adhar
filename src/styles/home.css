@@ -182,12 +182,17 @@
   align-items: center;
 }
 
+.recruitment-banner-grid > * {
+  min-width: 0;
+}
+
 .recruitment-title {
-  font-size: clamp(2.25rem, 4vw, 3.75rem);
+  font-size: clamp(1.75rem, 4vw, 3.75rem);
   font-weight: 300;
-  line-height: 1.1;
+  line-height: 1.15;
   color: #FFFFFF;
   margin-bottom: 1.25rem;
+  overflow-wrap: break-word;
 }
 
 .recruitment-desc {
@@ -195,6 +200,17 @@
   line-height: 1.65;
   color: rgba(245, 241, 232, 0.8);
   margin-bottom: 2rem;
+  overflow-wrap: break-word;
+}
+
+.recruitment-cta-group {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.recruitment-cta-group .btn {
+  max-width: 100%;
 }
 
 .recruitment-action-box {
@@ -205,19 +221,48 @@
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+  min-width: 0;
 }
 
 /* Responsive adjustments */
 @media (max-width: 1024px) {
+  .hero-section {
+    min-height: auto;
+    padding-top: clamp(6.5rem, 12vw, 9rem);
+    padding-bottom: clamp(3rem, 6vw, 5rem);
+  }
   .hero-typography-col {
     grid-column: span 12;
   }
   .hero-media-col {
     grid-column: span 12;
-    max-width: 540px;
+    max-width: 100%;
   }
   .statement-grid,
   .recruitment-banner-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero-cta-group,
+  .recruitment-cta-group {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.875rem;
+  }
+  .hero-cta-group .btn,
+  .recruitment-cta-group .btn {
+    width: 100%;
+    justify-content: center;
+  }
+  .hero-subhead-box {
+    padding-left: 1rem;
+  }
+  .recruitment-action-box {
+    padding: clamp(1.25rem, 4vw, 2rem);
+  }
+  .hero-image-wrap {
+    aspect-ratio: 4 / 3;
   }
 }

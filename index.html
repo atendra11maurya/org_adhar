@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>AADHARSHILA — The Foundation Stone | Motilal Nehru College, University of Delhi</title>
   <meta name="description" content="Aadharshila is the premier Personality Development & Character Building Society at Motilal Nehru College, University of Delhi. Cultivating self-awareness, confidence, articulate communication, and ethical leadership." />
+  <link rel="icon" type="image/png" href="/src/assets/logo_cropped.png" />
 
   <!-- Stylesheets -->
   <link rel="stylesheet" href="/src/styles/variables.css" />
@@ -18,7 +19,7 @@
   <header class="site-header" id="site-header">
     <div class="container nav-container">
       <a href="index.html" class="brand-identity" aria-label="Aadharshila Home">
-        <img class="brand-emblem-mini" src="/src/assets/logo_cropped.png" alt="Aadharshila Logo" />
+        <img class="brand-emblem-mini" src="/src/assets/logo_cropped.png" alt="Aadharshila Logo" width="48" height="48" />
         <div class="brand-names">
           <span class="brand-primary">AADHARSHILA</span>
           <span class="brand-sub">The Foundation Stone</span>
@@ -36,28 +37,39 @@
       <div class="nav-actions">
         <a href="about.html" class="btn btn-secondary">Our Ethos</a>
         <a href="join.html" class="btn btn-primary">Join Aadharshila</a>
-        <button class="mobile-toggle" id="mobile-toggle-btn" aria-label="Toggle Menu">
+        <button class="mobile-toggle" id="mobile-toggle-btn" type="button" aria-label="Open Navigation Menu" aria-expanded="false" aria-controls="mobile-menu-drawer">
           <i data-lucide="menu"></i>
         </button>
       </div>
     </div>
   </header>
 
-  <!-- Mobile Drawer -->
-  <div class="mobile-menu-drawer" id="mobile-menu-drawer">
-    <div style="display: flex; justify-content: flex-end; margin-bottom: 2rem;">
-      <button id="mobile-close-btn" style="background:none; border:none; cursor:pointer;">
-        <i data-lucide="x"></i>
-      </button>
-    </div>
+  <!-- Mobile Navigation Drawer -->
+  <div class="mobile-menu-drawer" id="mobile-menu-drawer" aria-label="Mobile Navigation" role="dialog" aria-modal="true">
     <div class="mobile-nav-links">
-      <a href="index.html" class="mobile-nav-link">Home</a>
-      <a href="about.html" class="mobile-nav-link">About</a>
-      <a href="events.html" class="mobile-nav-link">Events</a>
-      <a href="people.html" class="mobile-nav-link">People</a>
-      <a href="join.html" class="mobile-nav-link">Join</a>
+      <a href="index.html" class="mobile-nav-link active">Home</a>
+      <a href="about.html" class="mobile-nav-link">About Society</a>
+      <a href="events.html" class="mobile-nav-link">Events &amp; Archive</a>
+      <a href="people.html" class="mobile-nav-link">Leadership &amp; Faculty</a>
+      <a href="join.html" class="mobile-nav-link">Join Aadharshila</a>
     </div>
-    <a href="join.html" class="btn btn-primary" style="width: 100%; text-align: center;">Join Aadharshila</a>
+    <div class="mobile-drawer-footer">
+      <a href="join.html" class="btn btn-primary" style="width: 100%; justify-content: center;">
+        Join Aadharshila
+        <i data-lucide="arrow-right"></i>
+      </a>
+      <div class="mobile-social-row">
+        <a href="https://www.instagram.com/aadharshilaofficial_" target="_blank" rel="noopener noreferrer" class="mobile-social-link">
+          Instagram
+        </a>
+        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="mobile-social-link" title="LinkedIn (requires organizational profile confirmation)">
+          LinkedIn
+        </a>
+        <a href="mailto:aadharshila.mlnc@du.ac.in" class="mobile-social-link">
+          Email Us
+        </a>
+      </div>
+    </div>
   </div>
 
   <main id="main-content">
@@ -105,7 +117,18 @@
           <div class="hero-media-col hero-anim-item">
             <div class="hero-image-card">
               <div class="hero-image-wrap">
-                <div class="placeholder-photo">Add Photo</div>
+                <img 
+                  src="/src/assets/images/hero_discussion.jpg" 
+                  alt="Aadharshila students engaged in parliamentary discourse and rhetoric circle" 
+                  class="hero-image"
+                  loading="eager"
+                  width="720"
+                  height="960"
+                />
+              </div>
+              <div class="hero-image-caption">
+                <span>[ FIG. 01 — DISCOURSE &amp; RHETORIC ]</span>
+                <span class="accent-dot orange"></span>
               </div>
             </div>
           </div>
@@ -577,7 +600,7 @@
             <p class="recruitment-desc">
               Membership in Aadharshila is not passive attendance. It is an active commitment to personal excellence, rigorous articulation, and moral responsibility.
             </p>
-            <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+            <div class="recruitment-cta-group">
               <a href="https://docs.google.com/forms/d/e/1FAIpQLSf7KS5ZK0jw4t3rZtcNsqXErtdvS7EksbPbnFH3nird3IbPRQ/viewform?usp=header" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="background-color: var(--color-bg-base); color: var(--color-navy); border-color: var(--color-bg-base);">
                 Open Google Application Form
                 <i data-lucide="external-link"></i>
@@ -601,7 +624,7 @@
                 <i data-lucide="arrow-up-right" style="width: 14px; height: 14px;"></i>
               </a>
 
-              <a href="https://chat.whatsapp.com" target="_blank" rel="noopener noreferrer" style="display: flex; align-items: center; justify-content: space-between; gap: 0.75rem; font-size: 0.9375rem; color: #FFF; text-decoration: none; padding: 0.75rem 1rem; background: rgba(37,211,102,0.15); border-radius: var(--radius-sm); border: 1px solid rgba(37,211,102,0.3);">
+              <a href="https://chat.whatsapp.com/JX9P4zCuguTAeFyUNoKcVD" target="_blank" rel="noopener noreferrer" style="display: flex; align-items: center; justify-content: space-between; gap: 0.75rem; font-size: 0.9375rem; color: #FFF; text-decoration: none; padding: 0.75rem 1rem; background: rgba(37,211,102,0.15); border-radius: var(--radius-sm); border: 1px solid rgba(37,211,102,0.3);">
                 <div style="display: flex; align-items: center; gap: 0.75rem;">
                   <i data-lucide="message-circle" style="width: 18px; height: 18px; color: #25D366;"></i>
                   <span>Join WhatsApp Help &amp; Query Group</span>
@@ -665,9 +688,9 @@
           <div class="footer-col-heading">Connect</div>
           <div class="footer-links-list">
             <a href="https://www.instagram.com/aadharshilaofficial_" target="_blank" rel="noopener noreferrer" class="footer-link">Instagram</a>
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="footer-link">LinkedIn</a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="footer-link" title="LinkedIn (requires organizational profile confirmation)">LinkedIn</a>
             <a href="mailto:aadharshila.mlnc@du.ac.in" class="footer-link">aadharshila.mlnc@du.ac.in</a>
-            <span class="footer-link" style="opacity: 0.6; margin-top: 0.5rem;">Recruitment Open for 2026</span>
+            <span class="footer-link" style="opacity: 0.7; margin-top: 0.5rem;">2026 Intake &amp; Cohort Portal</span>
           </div>
         </div>
       </div>

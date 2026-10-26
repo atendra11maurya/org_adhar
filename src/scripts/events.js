@@ -147,7 +147,16 @@ export function initEventsModule() {
     `;
 
     modalBackdrop.classList.add('is-open');
+    modalBackdrop.setAttribute('aria-hidden', 'false');
     document.body.style.overflow = 'hidden';
+    if (modalClose) modalClose.focus();
+  }
+
+  function closeEventModal() {
+    if (!modalBackdrop) return;
+    modalBackdrop.classList.remove('is-open');
+    modalBackdrop.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
   }
 
   // Bind clicks
@@ -162,16 +171,20 @@ export function initEventsModule() {
   // Modal Close
   if (modalClose) {
     modalClose.addEventListener('click', () => {
-      modalBackdrop.classList.remove('is-open');
-      document.body.style.overflow = '';
+      closeEventModal();
     });
   }
 
   if (modalBackdrop) {
     modalBackdrop.addEventListener('click', (e) => {
       if (e.target === modalBackdrop) {
-        modalBackdrop.classList.remove('is-open');
-        document.body.style.overflow = '';
+        closeEventModal();
+      }
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && modalBackdrop.classList.contains('is-open')) {
+        closeEventModal();
       }
     });
   }

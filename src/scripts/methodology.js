@@ -15,11 +15,23 @@ export function initMethodologySequence() {
     });
   }
 
-  // Click on indicators scrolls smoothly to corresponding card
+  // Click and keyboard on indicators scrolls smoothly to corresponding card
   indicatorItems.forEach((item, index) => {
-    item.addEventListener('click', () => {
+    item.setAttribute('tabindex', '0');
+    item.setAttribute('role', 'button');
+    item.setAttribute('aria-label', `Navigate to Step 0${index + 1}`);
+
+    const activate = () => {
       if (cards[index]) {
         cards[index].scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+    };
+
+    item.addEventListener('click', activate);
+    item.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        activate();
       }
     });
   });

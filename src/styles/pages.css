@@ -82,6 +82,12 @@
   flex-direction: column;
   gap: 1rem;
   border-left: 3px solid var(--color-navy);
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+.pillar-deep-card-full {
+  grid-column: span 12;
 }
 
 .pillar-deep-card[data-color="green"] { border-left-color: var(--accent-green); }
@@ -273,7 +279,7 @@
 .google-form-card {
   background-color: var(--color-bg-card);
   border: 1px solid var(--color-border);
-  padding: clamp(2.5rem, 5vw, 3.75rem);
+  padding: clamp(1.25rem, 4vw, 3.5rem);
   border-radius: var(--radius-md);
   display: flex;
   flex-direction: column;
@@ -282,6 +288,33 @@
   border-top: 4px solid var(--color-navy);
   box-shadow: var(--shadow-subtle);
   transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.form-action-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+  border-top: 1px solid var(--color-border-subtle);
+  padding-top: 1.5rem;
+}
+
+.btn-form-action {
+  padding: 0.875rem 1.75rem;
+  font-size: 0.875rem;
+}
+
+@media (max-width: 640px) {
+  .form-action-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .btn-form-action {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
 }
 
 .google-form-card:hover {
@@ -304,6 +337,8 @@
   flex-direction: column;
   justify-content: space-between;
   gap: 1.5rem;
+  min-width: 0;
+  box-sizing: border-box;
   transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
 }
 
@@ -391,8 +426,9 @@
   .wings-grid {
     grid-template-columns: repeat(2, 1fr);
   }
-  .pillar-deep-card {
-    grid-column: span 12;
+  .pillar-deep-card,
+  .pillar-deep-card-full {
+    grid-column: 1 / -1;
   }
 }
 
@@ -408,5 +444,35 @@
   }
   .wings-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .pillars-deep-grid {
+    gap: 1.25rem;
+    margin-top: 2rem;
+  }
+  .vision-card,
+  .mission-card,
+  .pillar-deep-card,
+  .build-card,
+  .timeline-step-card,
+  .google-form-card,
+  .channel-cta-card,
+  .team-member-card,
+  .wing-card {
+    padding: clamp(1rem, 3.5vw, 1.75rem);
+  }
+  .events-filter-bar {
+    gap: 0.5rem;
+    padding: 1rem 0;
+  }
+  .filter-btn {
+    min-height: 40px;
+    padding: 0.5rem 0.875rem;
+  }
+  .form-action-row > div {
+    flex-wrap: wrap;
+    word-break: break-word;
   }
 }

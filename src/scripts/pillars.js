@@ -127,7 +127,29 @@ export function initPillarsInteractive() {
   }
 
   threadItems.forEach((item, index) => {
-    item.addEventListener('click', () => updatePillar(index));
+    item.setAttribute('tabindex', '0');
+    item.setAttribute('role', 'tab');
+    item.setAttribute('aria-selected', index === 0 ? 'true' : 'false');
+
+    const handleSelect = () => {
+      updatePillar(index);
+      threadItems.forEach((el, i) => el.setAttribute('aria-selected', i === index ? 'true' : 'false'));
+      if (window.innerWidth <= 1024) {
+        const displayCard = document.querySelector('.threads-display');
+        if (displayCard) {
+          displayCard.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+      }
+    };
+
+    item.addEventListener('click', handleSelect);
+    item.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        handleSelect();
+      }
+    });
+
     item.addEventListener('mouseenter', () => highlightEmblemPillar(index));
     item.addEventListener('mouseleave', () => {
       const activeIdx = Array.from(threadItems).findIndex((el) => el.classList.contains('active'));
